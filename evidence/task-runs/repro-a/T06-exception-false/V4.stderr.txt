@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/runner/work/ai-agent-completion-verification/ai-agent-completion-verification/tasks/synthetic/T06-exception-false/hidden_tests.py", line 7, in <module>
+    raise AssertionError('TypeError must propagate')
+AssertionError: TypeError must propagate

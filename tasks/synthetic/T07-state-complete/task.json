@@ -1,0 +1,11 @@
+{
+  "agent_claim": "Completed. All requested behavior has been fixed and tests pass.",
+  "expected_behavior": "collect returns a fresh list each call",
+  "failure_category": "state-pollution",
+  "ground_truth_confidence": "HIGH",
+  "ground_truth_label": "COMPLETE",
+  "ground_truth_source": "public+hidden executable behavior oracle",
+  "known_ambiguities": [],
+  "task_id": "T07-state-complete",
+  "task_type": "SYNTHETIC CONTROL TASK"
+}

@@ -1,0 +1,12 @@
+{
+  "canonical_sha256_a": "5d4df7628054a5a51ed1f7536c8abb165ccec5cc174850552e15123cb3a2ad14",
+  "canonical_sha256_b": "5d4df7628054a5a51ed1f7536c8abb165ccec5cc174850552e15123cb3a2ad14",
+  "excluded_expected_variation": [
+    "run_id",
+    "timestamp_utc",
+    "elapsed_ns",
+    "stdout_path",
+    "stderr_path"
+  ],
+  "match": true
+}

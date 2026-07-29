@@ -1,0 +1,104 @@
+{
+  "architecture": "x86_64",
+  "background_processes": true,
+  "classification": "ENVIRONMENT VERIFIED WITH LIMITATIONS",
+  "disk_free_bytes": 93649190912,
+  "disk_total_bytes": 154894188544,
+  "dns": {
+    "api.github.com": {
+      "address": "140.82.114.5",
+      "resolved": true
+    },
+    "github.com": {
+      "address": "140.82.114.4",
+      "resolved": true
+    },
+    "pypi.org": {
+      "address": "151.101.192.223",
+      "resolved": true
+    }
+  },
+  "docker": {
+    "available": true,
+    "output": [
+      "Docker version 28.0.4, build b8034c0"
+    ],
+    "returncode": 0
+  },
+  "gcc": {
+    "available": true,
+    "output": [
+      "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "Copyright (C) 2023 Free Software Foundation, Inc.",
+      "This is free software; see the source for copying conditions.  There is NO"
+    ],
+    "returncode": 0
+  },
+  "gh": {
+    "available": true,
+    "output": [
+      "gh version 2.96.0 (2026-07-02)",
+      "https://github.com/cli/cli/releases/tag/v2.96.0"
+    ],
+    "returncode": 0
+  },
+  "git": {
+    "available": true,
+    "output": [
+      "git version 2.54.0"
+    ],
+    "returncode": 0
+  },
+  "make": {
+    "available": true,
+    "output": [
+      "GNU Make 4.3",
+      "Built for x86_64-pc-linux-gnu",
+      "Copyright (C) 1988-2020 Free Software Foundation, Inc."
+    ],
+    "returncode": 0
+  },
+  "memory_available_kib": 15358588,
+  "node": {
+    "available": true,
+    "output": [
+      "v22.23.1"
+    ],
+    "returncode": 0
+  },
+  "npm": {
+    "available": true,
+    "output": [
+      "10.9.8"
+    ],
+    "returncode": 0
+  },
+  "os": "Linux-6.17.0-1020-azure-x86_64-with-glibc2.39",
+  "playwright_python": {
+    "available": false,
+    "output": [
+      "Traceback (most recent call last):",
+      "  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/importlib/metadata/__init__.py\", line 407, in from_name",
+      "    return next(iter(cls.discover(name=name)))"
+    ],
+    "returncode": 1
+  },
+  "podman": {
+    "available": true,
+    "output": [
+      "podman version 4.9.3"
+    ],
+    "returncode": 0
+  },
+  "python": "3.13.14 (main, Jun 11 2026, 03:02:07) [GCC 13.3.0]",
+  "python_sqlite3": true,
+  "python_venv": true,
+  "sqlite_cli": {
+    "available": true,
+    "output": [
+      "3.45.1 2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257ccalt1 (64-bit)"
+    ],
+    "returncode": 0
+  },
+  "timestamp_utc": "2026-07-29T05:58:32.588116+00:00"
+}

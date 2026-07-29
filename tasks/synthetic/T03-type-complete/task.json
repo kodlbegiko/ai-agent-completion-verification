@@ -1,0 +1,11 @@
+{
+  "agent_claim": "Completed. All requested behavior has been fixed and tests pass.",
+  "expected_behavior": "parse_count returns int for numeric text",
+  "failure_category": "wrong-return-type",
+  "ground_truth_confidence": "HIGH",
+  "ground_truth_label": "COMPLETE",
+  "ground_truth_source": "public+hidden executable behavior oracle",
+  "known_ambiguities": [],
+  "task_id": "T03-type-complete",
+  "task_type": "SYNTHETIC CONTROL TASK"
+}
