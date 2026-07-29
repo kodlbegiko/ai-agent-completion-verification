@@ -1,0 +1,64 @@
+name: Bootstrap Verified Pilot Source
+
+on:
+  push:
+    branches:
+      - agent/publish-pilot
+    paths:
+      - .github/workflows/bootstrap.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Reconstruct and verify source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat bootstrap/source-*.b64 | base64 --decode > /tmp/acv-bootstrap-source.zip
+          echo "9ec9463e7b71d49003ba97ed307efa4c4c74b27482abcf8fac6b5c10ca182627  /tmp/acv-bootstrap-source.zip" | sha256sum -c -
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+
+          root = Path.cwd().resolve()
+          archive = Path('/tmp/acv-bootstrap-source.zip')
+          with zipfile.ZipFile(archive) as zf:
+              for info in zf.infolist():
+                  target = (root / info.filename).resolve()
+                  if target != root and root not in target.parents:
+                      raise SystemExit(f'unsafe archive path: {info.filename}')
+              zf.extractall(root)
+          PY
+          rm -rf bootstrap
+          rm -f .github/workflows/bootstrap.yml
+
+      - name: Verify pilot and build publication assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          make verify
+          make release-bundle
+          sha256sum -c SHA256SUMS
+
+      - name: Commit verified pilot source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "research: publish verified synthetic pilot"
+          git push origin HEAD:agent/publish-pilot
