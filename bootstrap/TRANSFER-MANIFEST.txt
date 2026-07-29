@@ -1,4 +1,0 @@
-archive=acv-bootstrap-source.zip
-sha256=9ec9463e7b71d49003ba97ed307efa4c4c74b27482abcf8fac6b5c10ca182627
-chunks=9
-purpose=temporary verified source transfer; removed by bootstrap workflow

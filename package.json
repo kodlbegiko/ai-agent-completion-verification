@@ -1,0 +1,6 @@
+{
+  "name": "ai-agent-completion-verification",
+  "version": "0.1.0",
+  "private": true,
+  "description": "No Node runtime dependencies; package metadata retained for repository tooling compatibility."
+}

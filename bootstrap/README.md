@@ -1,1 +1,0 @@
-Temporary source-transfer material. The bootstrap workflow verifies the archive SHA-256, extracts the research project, runs the complete pilot verification, builds release assets, then deletes this directory before committing the publication candidate.

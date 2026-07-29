@@ -1,0 +1,24 @@
+{
+  "excluded_tasks": 0,
+  "files": {
+    "artifacts/reproducibility-pilot.json": "87f9a5d671d1a680b2bfa62a34cdb0bfa0ae6bd972278ac91600734a507664e9",
+    "data/manifests/pilot-task-manifest.csv": "4f361e7a8496895e95eeb69911733e21534fb94108f3915994e16e2b99b9de5b",
+    "evidence/environment/environment.json": "5563520db2e4b045eb5e1ced017d830e35116e157694431eb39e61b658601dd9",
+    "evidence/environment/github-connector-preflight.json": "51eb73f9be1c5d7950f370afc4ef56c39e3df5027991c037e349597518f55c2a",
+    "results/reports/pilot-primary-pilot-report.md": "523379ecdfc05eaadd1f88c11fde75131836aa29cf99d9ae151519fa95a84b05",
+    "results/reports/research-report.pdf": "61c76c00778b315ad7151c6ffc27197950ba91b27ef625ffedb5029e0a7729ef",
+    "results/tables/pilot-primary-metrics.csv": "4a3eb6a8ea3970490419ae074f765bff27fdcefe8bef97ee2f65499448a123cd"
+  },
+  "formal_verdict": "INCONCLUSIVE",
+  "methods": [
+    "V0",
+    "V1",
+    "V2",
+    "V3",
+    "V4"
+  ],
+  "protocol_snapshot_tag": "protocol-v0.1.0",
+  "status": "PILOT PUBLICATION CANDIDATE - REAL-WORLD EFFECTIVENESS INCONCLUSIVE",
+  "task_count": 12,
+  "valid_tasks": 12
+}

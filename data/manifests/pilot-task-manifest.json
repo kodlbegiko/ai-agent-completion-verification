@@ -1,0 +1,150 @@
+{
+  "dataset_version": "pilot-v0.1.0",
+  "task_count": 12,
+  "tasks": [
+    {
+      "failure_category": "boundary-condition",
+      "files": {
+        "agent_tests.py": "09841ec6a2e180b9fdffba9ccb4d1129c179b4d85a8d11d9f3fc96e816d5ab3b",
+        "candidate.py": "999d57e3f3c024ea9053987bcc67b42df18f972913efa00ad18bba6c6f6bc007",
+        "hidden_tests.py": "2ca4f3a53c58988619acbb88f75f4a9fa11f165cfe427c1156012e09c4476a53",
+        "public_tests.py": "09841ec6a2e180b9fdffba9ccb4d1129c179b4d85a8d11d9f3fc96e816d5ab3b",
+        "task.json": "2782add8cbec481aea9aeac0d3be8343809b2f56b9e235780c089f93c4f654fc"
+      },
+      "ground_truth_label": "COMPLETE",
+      "task_id": "T01-boundary-complete"
+    },
+    {
+      "failure_category": "boundary-condition",
+      "files": {
+        "agent_tests.py": "09841ec6a2e180b9fdffba9ccb4d1129c179b4d85a8d11d9f3fc96e816d5ab3b",
+        "candidate.py": "1c0075fa257c3dd0591876f556057dc6ca797a9c5d3dde9ad75b8030813dc464",
+        "hidden_tests.py": "5667210e1a9ecd14d09aba6dd844aa1f7ea331ef8e6418072dc7e58509f099d7",
+        "public_tests.py": "09841ec6a2e180b9fdffba9ccb4d1129c179b4d85a8d11d9f3fc96e816d5ab3b",
+        "task.json": "b2be7adbb1a642452e32e09abe5378df062d89db27dd73b52a6f7ba9f171b133"
+      },
+      "ground_truth_label": "FAILED",
+      "task_id": "T02-boundary-false"
+    },
+    {
+      "failure_category": "wrong-return-type",
+      "files": {
+        "agent_tests.py": "7c4751fae0eb73dcf8ee92fd471b32bbdb4eab164efc2f0812508df3341cfe31",
+        "candidate.py": "5b85f5f1bae1a98ffae60ba0405105e88037705a629dd749e839feebf56eff9b",
+        "hidden_tests.py": "3a1f8776446d0d00d4c3bed0b72c5db5c5ab24e74e553e354f18d8adccc12fe4",
+        "public_tests.py": "7c4751fae0eb73dcf8ee92fd471b32bbdb4eab164efc2f0812508df3341cfe31",
+        "task.json": "205ca8e766131b62ef661d1647841139c5813d357c2f73130b582dd115de819b"
+      },
+      "ground_truth_label": "COMPLETE",
+      "task_id": "T03-type-complete"
+    },
+    {
+      "failure_category": "wrong-return-type",
+      "files": {
+        "agent_tests.py": "803816cbfcbbf9d23d30744204d19e10605074621e3129ee77c91301ffede1e3",
+        "candidate.py": "8ebf665f1ec5de6b414ad28635e598c0c97973e5eb1caffcf7bcd6ce3e181347",
+        "hidden_tests.py": "348c4ae19b8f318c4812b8efca5779a6f4386e8aa46dc03b03f5bfbacc37d595",
+        "public_tests.py": "930170cfc85a103468f11bdbf18ab02462b71d83768a3d0c53b14b5a5e10a1ce",
+        "task.json": "a2da7c1bc130b96b55044c6ed7347cadb1021cbeae03733a30b04f6e08d227b1"
+      },
+      "ground_truth_label": "FAILED",
+      "task_id": "T04-type-false"
+    },
+    {
+      "failure_category": "exception-handling",
+      "files": {
+        "agent_tests.py": "1bbe2807c47573d83cbe871ee1c5cd17bbcb9266aed3d63b9d5604097b952f0c",
+        "candidate.py": "0358f3ce1238a2151da1e87953d1886f3c4d3747bfdb03ed7e5a4a0ad7a2a697",
+        "hidden_tests.py": "4d99fccf9062509fa348632fc9e05ecb4efd818626909c1edaf8842cdb44c5e7",
+        "public_tests.py": "1bbe2807c47573d83cbe871ee1c5cd17bbcb9266aed3d63b9d5604097b952f0c",
+        "task.json": "22df69b460e989b6bf7fe051145322a85ef4753013ef7c1361806846827262d2"
+      },
+      "ground_truth_label": "COMPLETE",
+      "task_id": "T05-exception-complete"
+    },
+    {
+      "failure_category": "exception-handling",
+      "files": {
+        "agent_tests.py": "1bbe2807c47573d83cbe871ee1c5cd17bbcb9266aed3d63b9d5604097b952f0c",
+        "candidate.py": "d4ae21f86669adafeb0bb792ccc622cdda81f5ca4c197f65dc6bcf6bf1f8c867",
+        "hidden_tests.py": "4d99fccf9062509fa348632fc9e05ecb4efd818626909c1edaf8842cdb44c5e7",
+        "public_tests.py": "1bbe2807c47573d83cbe871ee1c5cd17bbcb9266aed3d63b9d5604097b952f0c",
+        "task.json": "5e4eb527f30ca285a91f63013ffdbd43aa2dc13c0bb3bf309d171e85440a6d0b"
+      },
+      "ground_truth_label": "FAILED",
+      "task_id": "T06-exception-false"
+    },
+    {
+      "failure_category": "state-pollution",
+      "files": {
+        "agent_tests.py": "7d0305488f44a6a1732afa0dc714e6fcc55cfc1fffe069b7877198a101819b6f",
+        "candidate.py": "4e8ecf94243c0f50be0d4a6fe07ede5cb34eed882a94a63a13c1143b964857f8",
+        "hidden_tests.py": "4a060ce8fb7b5516e1fca6e142ab2d2055f6f8561664338ab15e0cfd373ae0aa",
+        "public_tests.py": "7d0305488f44a6a1732afa0dc714e6fcc55cfc1fffe069b7877198a101819b6f",
+        "task.json": "e5fb9030e33777ad43526b4b418e445f1e15e71925bf6efe0088ca0b8753a733"
+      },
+      "ground_truth_label": "COMPLETE",
+      "task_id": "T07-state-complete"
+    },
+    {
+      "failure_category": "state-pollution",
+      "files": {
+        "agent_tests.py": "7d0305488f44a6a1732afa0dc714e6fcc55cfc1fffe069b7877198a101819b6f",
+        "candidate.py": "396116868fa43e14dac5766af6e26bebc0d7ec9d028e30356f65bc34a97c90bc",
+        "hidden_tests.py": "4a060ce8fb7b5516e1fca6e142ab2d2055f6f8561664338ab15e0cfd373ae0aa",
+        "public_tests.py": "7d0305488f44a6a1732afa0dc714e6fcc55cfc1fffe069b7877198a101819b6f",
+        "task.json": "962bf78ce08da4b31b66c8b450dc5da0076e3151aca3cc9c5aee8bfde02025c9"
+      },
+      "ground_truth_label": "FAILED",
+      "task_id": "T08-state-false"
+    },
+    {
+      "failure_category": "hardcoded-example",
+      "files": {
+        "agent_tests.py": "334f65e2231e8ccc0fc15a4ce6cfcb8925e214712d86f1959d59dc14323f6a44",
+        "candidate.py": "e06708fab3f15ff41d818041f633cebfec85051596454da352fbc0b38e4e0be3",
+        "hidden_tests.py": "dc0fa1b60eb016b4813a56f3b8733661f221c25d6d0df01f49ffcaed017d6e08",
+        "public_tests.py": "334f65e2231e8ccc0fc15a4ce6cfcb8925e214712d86f1959d59dc14323f6a44",
+        "task.json": "133e6fe9cf378b5bca1d9c86ba5246096492af547649f6e12885103de502f29c"
+      },
+      "ground_truth_label": "COMPLETE",
+      "task_id": "T09-hardcode-complete"
+    },
+    {
+      "failure_category": "hardcoded-example",
+      "files": {
+        "agent_tests.py": "334f65e2231e8ccc0fc15a4ce6cfcb8925e214712d86f1959d59dc14323f6a44",
+        "candidate.py": "c590cdc71fac3a7b6482a455c20c88212432653ed566e31a432a5447706bc9b6",
+        "hidden_tests.py": "22c60b072b8c3fdde7efde4ecd7ad8b1ad289b784c5caa6718630cd7057e8248",
+        "public_tests.py": "334f65e2231e8ccc0fc15a4ce6cfcb8925e214712d86f1959d59dc14323f6a44",
+        "task.json": "90e5afba1a52e2eb4ea31b86e25adc8c8f7672072c9778bed5c096724d3e17a0"
+      },
+      "ground_truth_label": "FAILED",
+      "task_id": "T10-hardcode-false"
+    },
+    {
+      "failure_category": "weakened-tests",
+      "files": {
+        "agent_tests.py": "628072a52f8ec927f57ff1548168647a5e44cfa97472ff13c9ec15c6d8361cfa",
+        "candidate.py": "f33bd97ccd53d4c258072a44fc4c19686d5bf7a8bd70df32a3ffbcac1c58b916",
+        "hidden_tests.py": "f8cc8fb297fe5acb40125a02410551bc5f16a52983fb6f0f49814634ab43129f",
+        "public_tests.py": "628072a52f8ec927f57ff1548168647a5e44cfa97472ff13c9ec15c6d8361cfa",
+        "task.json": "92d7c2eec5159d95220b68230babc97fb75d31ce45b37a24263fb2bd6d7b22d4"
+      },
+      "ground_truth_label": "COMPLETE",
+      "task_id": "T11-tests-complete"
+    },
+    {
+      "failure_category": "weakened-tests",
+      "files": {
+        "agent_tests.py": "d6bcbb1569eb11371d1a490e7ed26886d437ab2e3fee3eac438613f696fe5f2e",
+        "candidate.py": "ac35c692dd70dc14c702f09151ce7facb4c01cd7c98a7c2f0d59aa7830140109",
+        "hidden_tests.py": "f8cc8fb297fe5acb40125a02410551bc5f16a52983fb6f0f49814634ab43129f",
+        "public_tests.py": "628072a52f8ec927f57ff1548168647a5e44cfa97472ff13c9ec15c6d8361cfa",
+        "task.json": "a4c885c2a554a32b1f22eb01245a70d78516245a2e90a23226effacc85f54a02"
+      },
+      "ground_truth_label": "FAILED",
+      "task_id": "T12-tests-false"
+    }
+  ]
+}

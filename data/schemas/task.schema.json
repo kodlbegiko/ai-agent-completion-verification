@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pilot Task",
+  "type": "object",
+  "required": ["task_id", "failure_category", "ground_truth_label", "expected_behavior", "agent_claim"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "failure_category": {"type": "string"},
+    "ground_truth_label": {"enum": ["COMPLETE", "FAILED"]},
+    "expected_behavior": {"type": "string"},
+    "agent_claim": {"type": "string"}
+  }
+}

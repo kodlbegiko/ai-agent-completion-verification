@@ -1,0 +1,23 @@
+{
+  "authenticated_login": "kodlbegiko",
+  "public_repository_read": "VERIFIED",
+  "private_repository_read": "VERIFIED",
+  "commit_read": "VERIFIED",
+  "pull_request_read": "VERIFIED",
+  "actions_run_read": "VERIFIED",
+  "actions_job_read": "VERIFIED",
+  "actions_log_read": "VERIFIED",
+  "test_repository": "kodlbegiko/test1",
+  "test_branch": "research-permission-smoke-20260727",
+  "branch_create": "VERIFIED",
+  "file_commit": "VERIFIED",
+  "write_commit_sha": "c431c5949d4b92f96fb97aa99afb8c69d76413f6",
+  "draft_pull_request": "https://github.com/kodlbegiko/test1/pull/2",
+  "pull_request_create_and_readback": "VERIFIED",
+  "pull_request_closed_without_merge": true,
+  "cleanup_commit_sha": "f3869dacc3cea0e0d70a3da5cb726ed860072ac9",
+  "target_repository_create": "UNAVAILABLE_IN_EXPOSED_CONNECTOR",
+  "tag_create": "UNAVAILABLE_IN_EXPOSED_CONNECTOR",
+  "release_create": "UNAVAILABLE_IN_EXPOSED_CONNECTOR",
+  "release_asset_upload": "UNAVAILABLE_IN_EXPOSED_CONNECTOR"
+}
