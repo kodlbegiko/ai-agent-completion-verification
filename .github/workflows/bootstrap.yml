@@ -35,7 +35,19 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat bootstrap/source-*.b64 | base64 --decode > /tmp/acv-bootstrap-source.zip
+          cat > /tmp/chunk-SHA256SUMS <<'SUMS'
+          00c828be256c0fcc086bbfe236d0089a8a53d110ca8803f4777e50c54005b712  bootstrap/source-00.b64
+          5f95251f22d5dea1212cd1a047463eb4dadf1707bb6156c1acfa0ad4ee315926  bootstrap/source-01.b64
+          3d2d0bd7005cc74f96a3c9942bce597f3eb4a92f4a373c56442fd713b882b82f  bootstrap/source-02.b64
+          bc871a12e4d4627b44111dc139979be5214966d268774165ba9afc6d730165de  bootstrap/source-030.b64
+          92bc98cff46cf005c89f33efd61b2ef2370ac1e3052eb6901ab9d4238673970b  bootstrap/source-031.b64
+          8a0a0d4508e4a00f5343a5c03cbc38e5e680858d8fc401730fff3bef65c28964  bootstrap/source-040.b64
+          b3ab43871df710d41c4e6bb69a777df95ac6d64c21305218d7a6e08c68ffc73f  bootstrap/source-041.b64
+          ae46785b9972a00a3dbd29249d9aa62fdaf25cb945edfe3c0d07187b77194673  bootstrap/source-050.b64
+          470f63cdf06a76f08d9b5cc397f3f9a7c65284409d039d5df901b8021c99f4c5  bootstrap/source-051.b64
+          SUMS
+          sha256sum -c /tmp/chunk-SHA256SUMS
+          cat bootstrap/source-00.b64 bootstrap/source-01.b64 bootstrap/source-02.b64 bootstrap/source-030.b64 bootstrap/source-031.b64 bootstrap/source-040.b64 bootstrap/source-041.b64 bootstrap/source-050.b64 bootstrap/source-051.b64 | base64 --decode > /tmp/acv-bootstrap-source.zip
           echo "9ec9463e7b71d49003ba97ed307efa4c4c74b27482abcf8fac6b5c10ca182627  /tmp/acv-bootstrap-source.zip" | sha256sum -c -
           python - <<'PY'
           from pathlib import Path
