@@ -1,0 +1,60 @@
+name: Pilot Release
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+permissions:
+  contents: write
+jobs:
+  release:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Re-run locked pilot gates
+        run: make verify
+      - name: Build release assets
+        run: make release-bundle
+      - name: Verify release checksums
+        run: sha256sum -c SHA256SUMS
+      - name: Create immutable protocol and pilot tags
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROTOCOL_TAG: protocol-v0.1.0
+          RELEASE_TAG: v0.1.0-pilot
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if ! git rev-parse "$PROTOCOL_TAG" >/dev/null 2>&1; then
+            git tag -a "$PROTOCOL_TAG" -m "Locked pilot research protocol v0.1.0"
+            git push origin "$PROTOCOL_TAG"
+          fi
+
+          if git rev-parse "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "$RELEASE_TAG already exists; refusing to rewrite it."
+            exit 0
+          fi
+
+          git tag -a "$RELEASE_TAG" -m "v0.1.0 Pilot - Completion Verification Research Infrastructure"
+          git push origin "$RELEASE_TAG"
+          gh release create "$RELEASE_TAG" \
+            --title "v0.1.0 Pilot - Completion Verification Research Infrastructure" \
+            --notes-file results/reports/pilot-primary-pilot-report.md \
+            results/reports/research-report.pdf \
+            results/reports/pilot-primary-pilot-report.md \
+            results/tables/pilot-primary-metrics.csv \
+            data/manifests/pilot-task-manifest.csv \
+            evidence/environment/environment.json \
+            evidence/publication/evidence-manifest.json \
+            artifacts/reproduction-bundle.zip \
+            SHA256SUMS
