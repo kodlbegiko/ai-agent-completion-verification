@@ -82,6 +82,26 @@ jobs:
                       raise SystemExit(f'unsafe archive path: {info.filename}')
               zf.extractall(root)
           PY
+
+          # A clean Git checkout does not preserve empty directories. Make the
+          # analysis command create its own output directories so the same
+          # source works locally, in CI, and in independent reproductions.
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('scripts/analyze_results.py')
+          text = path.read_text(encoding='utf-8')
+          needle = '    path = ROOT / args.input\n'
+          replacement = (
+              needle
+              + '    for output_dir in (ROOT / "results" / "tables", ROOT / "results" / "reports"):\n'
+              + '        output_dir.mkdir(parents=True, exist_ok=True)\n'
+          )
+          if needle not in text:
+              raise SystemExit('analysis output-directory patch anchor not found')
+          path.write_text(text.replace(needle, replacement, 1), encoding='utf-8')
+          PY
+
           rm -rf bootstrap
           rm -f .github/workflows/bootstrap.yml
 
