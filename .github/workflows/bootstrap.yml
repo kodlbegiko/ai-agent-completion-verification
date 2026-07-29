@@ -83,9 +83,6 @@ jobs:
               zf.extractall(root)
           PY
 
-          # A clean Git checkout does not preserve empty directories. Make the
-          # analysis command create its own output directories so the same
-          # source works locally, in CI, and in independent reproductions.
           python - <<'PY'
           from pathlib import Path
 
@@ -103,7 +100,14 @@ jobs:
           PY
 
           rm -rf bootstrap
-          rm -f .github/workflows/bootstrap.yml
+          # The workflow token may write repository contents but may not create
+          # workflow files. Keep this existing bootstrap workflow unchanged and
+          # let the authenticated connector install the verified workflows after
+          # the source commit lands.
+          rm -f \
+            .github/workflows/ci.yml \
+            .github/workflows/release.yml \
+            .github/workflows/reproducibility.yml
 
       - name: Verify pilot and build publication assets
         shell: bash
