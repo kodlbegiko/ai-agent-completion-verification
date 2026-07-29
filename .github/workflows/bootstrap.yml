@@ -44,14 +44,30 @@ jobs:
           }
           check_chunk 4e0cf518cef45f22cba9d2655a21998c490a8d8e4ef924fe7650fac995526e27 bootstrap/source-00.b64
           check_chunk 9f1e711766321204661cc64d2adf0bb4695994d2b0d8c7fd943c7f5ad5ef541d bootstrap/source-01.b64
-          check_chunk 123448dd3b513caf533263bb57a919d9ba5ffa24853477b63027e5cc17d3652e bootstrap/source-02.b64
+          check_chunk c3b60ff05d0ec3f03e6806ab6319c454b261d6dfbd57b9ee46372a3335f26d80 bootstrap/source-0200.b64
+          check_chunk 573373411adab03dcc5a68b79d0e4f46df8d76e6cd3977f99a77abdbee89d8cc bootstrap/source-0201.b64
+          check_chunk e7646d44cd73fb3e140ef183ae0cf47f2bd2f03979353397b063e040148474b3 bootstrap/source-0202.b64
+          check_chunk 5cd66490299d1bb3597103261a5834e905237b2ce21863fde8c875f3d059b486 bootstrap/source-0203.b64
           check_chunk bc871a12e4d4627b44111dc139979be5214966d268774165ba9afc6d730165de bootstrap/source-030.b64
           check_chunk 92bc98cff46cf005c89f33efd61b2ef2370ac1e3052eb6901ab9d4238673970b bootstrap/source-031.b64
           check_chunk 8a0a0d4508e4a00f5343a5c03cbc38e5e680858d8fc401730fff3bef65c28964 bootstrap/source-040.b64
           check_chunk b3ab43871df710d41c4e6bb69a777df95ac6d64c21305218d7a6e08c68ffc73f bootstrap/source-041.b64
           check_chunk ae46785b9972a00a3dbd29249d9aa62fdaf25cb945edfe3c0d07187b77194673 bootstrap/source-050.b64
           check_chunk 470f63cdf06a76f08d9b5cc397f3f9a7c65284409d039d5df901b8021c99f4c5 bootstrap/source-051.b64
-          cat bootstrap/source-00.b64 bootstrap/source-01.b64 bootstrap/source-02.b64 bootstrap/source-030.b64 bootstrap/source-031.b64 bootstrap/source-040.b64 bootstrap/source-041.b64 bootstrap/source-050.b64 bootstrap/source-051.b64 | base64 --decode > /tmp/acv-bootstrap-source.zip
+          cat \
+            bootstrap/source-00.b64 \
+            bootstrap/source-01.b64 \
+            bootstrap/source-0200.b64 \
+            bootstrap/source-0201.b64 \
+            bootstrap/source-0202.b64 \
+            bootstrap/source-0203.b64 \
+            bootstrap/source-030.b64 \
+            bootstrap/source-031.b64 \
+            bootstrap/source-040.b64 \
+            bootstrap/source-041.b64 \
+            bootstrap/source-050.b64 \
+            bootstrap/source-051.b64 \
+            | base64 --decode > /tmp/acv-bootstrap-source.zip
           echo "9ec9463e7b71d49003ba97ed307efa4c4c74b27482abcf8fac6b5c10ca182627  /tmp/acv-bootstrap-source.zip" | sha256sum -c -
           python - <<'PY'
           from pathlib import Path
